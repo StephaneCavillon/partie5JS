@@ -7,9 +7,11 @@ document.getElementById('check').addEventListener('click', function checking(){
     let passwordConfirm = document.getElementById('passwordConfirm').value;
 
     if(password === passwordConfirm){
+        // transforme le style de l'élément avec les ID indiqué si vrai
         document.getElementById('password').style.borderColor = 'green';
         document.getElementById('passwordConfirm').style.borderColor = 'green';
     } else { 
+        // transforme le style de l'élément avec les ID indiqué si vrai
         document.getElementById('password').style.borderColor = 'red';
         document.getElementById('passwordConfirm').style.borderColor = 'red';
     }
