@@ -1,0 +1,7 @@
+.ifTrue{
+    border-color: green;
+}
+
+.ifFalse{
+    border-color:red;
+}
