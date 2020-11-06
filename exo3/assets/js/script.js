@@ -1,6 +1,6 @@
 // Déclaration des regex
-const regexName = /[a-z]+/i;
-const regexMail = /[\w.-]+@{1}[\w-]+\.{1}\w{2,10}/;
+const regexName = /^[a-z]+$/i;
+const regexMail = /[\w\.-]+@{1}[\w-]+\.{1}\w{2,10}/;
 const regexAge = /\d{1,3}/; 
 
 //création des fonctions de validation
@@ -22,7 +22,6 @@ const validName = function (inputName){
 const validEMail = function (inputEmail){
 
     // On teste la regex
-
     if(regexMail.test(inputEmail.value)){
         document.getElementById('valideMail').innerHTML = 'Email Valide';
         document.getElementById('valideMail').style.color = 'green';
