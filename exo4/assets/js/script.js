@@ -27,7 +27,7 @@ const srcChange = function (element){
         srcValue = 'assets/img/cafetiere.jpg';
     } else {
         srcValue = 'assets/img/tasseCafe.jpg';
-    }
+    };
 
     // changement de l'image
     element.setAttribute('src', srcValue);
@@ -36,11 +36,11 @@ const srcChange = function (element){
 //zoom sur l'image
 
 const imgZoom = function (element){
-    //récuperation de la taille
-    let widthValue = element.getAttribute('width');
+    // //récuperation de la taille
+    // let widthValue = element.getAttribute('width');
 
     //zoom de l'image
-    let zoom = widthValue * 1.25;
+    let zoom = element.getAttribute('width') * 1.25;
 
     //réattribution de la nouvelle width
     element.setAttribute('width', zoom);
@@ -50,11 +50,11 @@ const imgZoom = function (element){
 };
 
 const imgDezoom = function (element){
-    //récuperation de la taille
-    let widthValue = element.getAttribute('width');
+    // //récuperation de la taille
+    // let widthValue = element.getAttribute('width');
 
     //zoom de l'image
-    let zoom = widthValue / 1.25;
+    let zoom = element.getAttribute('width') / 1.25;
 
     //réattribution de la nouvelle width
     element.setAttribute('width', zoom);
