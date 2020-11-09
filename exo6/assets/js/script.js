@@ -14,8 +14,7 @@ document.querySelectorAll('input').forEach(item=> {
 
 document.querySelectorAll('input').forEach(item=>{
     item.addEventListener('blur',function(){
-    this.classList.remove('onFocus');
+        this.classList.remove('onFocus');
     });
 });
-
 
