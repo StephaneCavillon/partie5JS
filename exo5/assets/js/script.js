@@ -1,4 +1,3 @@
-
 // Déclaration des boutons
 const text = document.getElementsByTagName('p').item(0);
 const pink = document.getElementsByTagName('button').item(0);
@@ -6,8 +5,6 @@ const blue = document.getElementsByTagName('button').item(1);
 const purple = document.getElementsByTagName('button').item(2);
 const bold = document.getElementsByTagName('button').item(3);
 const italic = document.getElementsByTagName('button').item(4);
-
-// console.log(document.getElementsByTagName('button'));
 
 // Déclaration des listeners
 pink.addEventListener('click', function(){

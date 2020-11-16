@@ -16,3 +16,7 @@ document.getElementById('check').addEventListener('click', function checking(){
         document.getElementById('passwordConfirm').style.borderColor = 'red';
     }
 });
+
+//correction
+
+// button.onclick = function() {description de la fonction};

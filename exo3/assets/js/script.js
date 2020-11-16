@@ -1,47 +1,51 @@
 // Déclaration des regex
-const regexName = /^[a-z]+$/i;
-const regexMail = /[\w\.-]+@{1}[\w-]+\.{1}\w{2,10}/;
-const regexAge = /\d{1,3}/; 
+//nom ajouter les caractères spéciaux, penser aux délimteurs
+const regexName = /^[a-z-]+$/i;
+const regexMail = /^[\w\.-]+@[\w-]+\.\w{2,10}$/;
+const regexAge = /^\d{1,3}$/; 
 
 //création des fonctions de validation
 
 //Pour le Nom
 const validName = function (inputName){
+   let validMessage = document.getElementById('valideName');
     
     // On teste la regex
     if(regexName.test(inputName.value)){
-        document.getElementById('valideName').innerHTML = 'Nom Valide';
-        document.getElementById('valideName').style.color = 'green';
+        validMessage.innerHTML = 'Nom Valide';
+        validMessage.style.color = 'green';
     } else {
-        document.getElementById('valideName').innerHTML = 'Nom Non Valide';
-        document.getElementById('valideName').style.color = 'red';
+        validMessage.innerHTML = 'Nom Non Valide';
+        validMessage.style.color = 'red';
     }
 };
 
 //Pour le mail
 const validEMail = function (inputEmail){
+    let validMessage = document.getElementById('valideMail');
 
     // On teste la regex
     if(regexMail.test(inputEmail.value)){
-        document.getElementById('valideMail').innerHTML = 'Email Valide';
-        document.getElementById('valideMail').style.color = 'green';
+        validMessage.innerHTML = 'Email Valide';
+        validMessage.style.color = 'green';
     } else {
-        document.getElementById('valideMail').innerHTML = 'Email Non Valide';
-        document.getElementById('valideMail').style.color = 'red';
+        validMessage.innerHTML = 'Email Non Valide';
+        validMessage.style.color = 'red';
     }
 };
 
 
 // Pour l'age
 const validAge = function (inputAge){
+    let validMessage = document.getElementById('valideAge');
 
     // On teste la regex
     if(regexAge.test(inputAge.value)){
-        document.getElementById('valideAge').innerHTML = 'Age Valide';
-        document.getElementById('valideAge').style.color = 'green';
+        validMessage.innerHTML = 'Age Valide';
+        validMessage.style.color = 'green';
     } else {
-        document.getElementById('valideAge').innerHTML = 'Age Non Valide';
-        document.getElementById('valideAge').style.color = 'red';
+        validMessage.innerHTML = 'Age Non Valide';
+        validMessage.style.color = 'red';
     }
 };
 
