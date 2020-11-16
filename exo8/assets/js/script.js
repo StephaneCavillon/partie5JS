@@ -1,5 +1,5 @@
 // Déclaration des variables
-let i=1;
+let i=0;
 
 // Création de la fonction de clonage
 function duplic(){
@@ -7,7 +7,7 @@ function duplic(){
     i++;
 
     // Je créé un clone de mon noeud avec tout ce qu'il contient (true)
-    const clone = document.getElementById('champ').cloneNode(true);
+    let clone = document.getElementById('champ').cloneNode(true);
 
     // Je place le clone dans le premier item du fieldset
     document.getElementsByTagName('fieldset').item(0).appendChild (clone);
@@ -18,8 +18,10 @@ function duplic(){
     // je remplace le placeholder des input
     clone.children.item(0).setAttribute('placeholder','');
     clone.children.item(0).setAttribute('value','');
+    clone.children.item(0).id += i;
     clone.children.item(2).setAttribute('placeholder','');
     clone.children.item(2).setAttribute('value','');
+    clone.children.item(2).id += i;
 
 };
 
